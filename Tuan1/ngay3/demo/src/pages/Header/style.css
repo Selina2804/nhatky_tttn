@@ -1,0 +1,129 @@
+.header {
+  width: 100%;
+  background: #d3e7ee;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;     
+  justify-content: space-between;
+  min-height: 70px;       
+  box-sizing: border-box;
+}
+
+.header-logo img {
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover {
+  color: #777;
+}
+
+.header-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  align-items: center;
+}
+
+.mobile-nav {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-nav a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s, background 0.2s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.mobile-nav a:hover {
+  color: #666;
+  background: rgba(0,0,0,0.05);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Cái này hỏi chat */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav,
+  .header-action {
+    display: none;
+  }
+  .header-menu-icon {
+    display: block;
+  }
+}

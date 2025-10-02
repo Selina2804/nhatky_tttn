@@ -1,0 +1,32 @@
+.notfound-container {
+  text-align: center;
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notfound-title {
+  font-size: 80px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.notfound-message {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.back-home {
+  text-decoration: none;
+  font-size: 16px;
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.back-home:hover {
+  background: #3498db;
+  color: white;
+}
